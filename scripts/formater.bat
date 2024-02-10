@@ -1,0 +1,2 @@
+ruff format --exit-code
+```
