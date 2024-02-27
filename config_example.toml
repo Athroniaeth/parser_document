@@ -1,0 +1,33 @@
+name = "main"
+limit_errors = 0
+
+path_analytic = "data/pipeline"
+path_input = "data/pipeline/01_raw_documents"  # "C:/Users/pierre.chaumont/Desktop/Dataset/geo_dataset/1k"
+path_output = "data/pipeline/07_output"
+path_ground_truth = "data/ground_truth.csv"
+
+[pipeline]
+    [pipeline.image]
+    folder_output = "02_raw_images"
+    dpi = 300
+
+    [pipeline.preprocess]
+    folder_output = "03_preprocess_images"
+
+    active_upscale = false
+    active_grayscale = true
+    active_noise_reduction = false
+    active_binarization = false
+    active_skew_correction = false
+    active_normalization = false
+    active_thinning = false
+
+
+    [pipeline.ocr]
+    folder_output = "04_ocr_images"
+
+    [pipeline.correction]
+    folder_output = "05_corrected_images"
+
+    [pipeline.extraction]
+    folder_output = "06_extracted_bbox_images"

@@ -1,2 +1,1 @@
 ruff format --exit-code
-```
